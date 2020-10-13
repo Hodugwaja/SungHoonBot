@@ -1,0 +1,192 @@
+<!--봇 제작 : MakerZip-->
+<!--홈페이지 제작 : 호두과자-->
+<!--홈페이지 베이스 :W3School-->
+<!DOCTYPE html>
+<html>
+<title>GroomSoft/RasberryStar</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link href="https://fonts.googleapis.com/css?family=Cabin:400,700" rel="stylesheet">
+<style>
+body {font-family: "Cabin"}
+.AnotherBots{
+  text-decoration: none;
+}
+.title{
+  color : #3f6fdc
+}
+</style>
+<body class="w3-light-grey">
+
+<div class="w3-content" style="max-width:1600px">
+  <!-- Image header -->
+   <!-- Header -->
+   <header class="w3-container w3-padding-48">
+    <h1 class="w3-xxxlarge w3-tag w3-margin-right title"><b>구름소프트</b></h1>
+  </header>
+
+  <!-- Image header -->
+  <header class="w3-display-container w3-wide" id="home">
+    <img style = "background-attachment: fixed;" class="w3-image" src="http://makerzip.com/assets/hodu_Gwaja/background_invite_light.jpg" alt="Fashion Blog" width="1600">
+    <div class="w3-display-left w3-padding-large">
+      <h1 class="w3-text-white">구름소프트 presents</h1>
+      <h1 class="w3-jumbo w3-text-white w3-hide-small"><b>BerryAI</b></h1>
+      <h6><a target = "_blank" href = "http://invite.berryai.kro.kr/" class="w3-button w3-white w3-padding-large w3-large w3-opacity w3-hover-opacity-off">초대하기</a></h6>
+      <h6><a target = "_blank" href = "https://discord.gg/89cxPxg" class="w3-button w3-white w3-padding-large w3-large w3-opacity w3-hover-opacity-off">문의하기</a></h6>
+    </div>
+  </header>
+
+  <!-- Grid -->
+  <div class="w3-row w3-padding w3-border">
+
+    <!-- Blog entries -->
+    <div class="w3-col l8 s12">
+    
+      <!-- Blog entry -->
+      <div class="w3-container w3-white w3-margin w3-padding-large">
+        <div class="w3-center">
+          <h3>베리 0.0.1 업데이트 로그</h3>
+          <h5>MakerZip, <span class="w3-opacity">2020년 10월 7일</span></h5>
+        </div>
+
+        <div class="w3-justify">
+          <p> + Kanami 언어 지원</p>
+          <p> + 베리 챗봇 제작</p>
+          <p> - 베리 임베드 명령어 제거 </p>
+          <p class="w3-left"><button class="w3-button w3-white w3-border" onclick="likeFunction(this)"><b><i class="fa fa-thumbs-up"></i> Like</b></button></p>
+          <p class="w3-clear"></p>
+          <div class="w3-row w3-margin-bottom" id="demo1" style="display:none">
+            <hr>
+          </div>
+        </div>
+      </div>
+      <hr>      
+    <!-- END BLOG ENTRIES -->
+    </div>
+    
+    <!-- About/Information menu -->
+    <div class="w3-col l4">
+      <!-- About Card -->
+      <div class="w3-white w3-margin">
+        <img src="./BerryProfile.png" alt="맥심 프사" style="width:100%">
+        <div class="w3-container w3-black">
+          <!-- 베리 소개 과거버전(지우기 귀찮았음)
+          <h4>RasberryStar</h4>
+          <strong><p>귀염뽀짝한 챗봇친구 베리입니다!</p></strong>
+          <p>안녕하세요! 구름소프트 머장(?)이자 베리 개발자인 메이커집입니다.</p>
+          <strong><p>심심할때는 끝말잇기!!</p></strong>
+          <p>누구나 다 가지고 있지만 심심해서 넣은 끝말잇기 기능이 있습니다</p>
+          <strong><p>아름다운 한글, 베리가 지켜드립니다!!</p></strong>
+          <p>이 말은 이프처럼 검열 한다는게 아닙니다. 베리의 특별한 기능은 영어를 쓰게 된다면 검열하는 기능입니다. 한글만 쓰는 디스코드를 한번 느껴보세요!!</p>
+          <strong><p>카나미를 알려주는 천재봇</p></strong>
+          <p>메이커집이 제작한 카나미라는 언어를 알려줄 수 있는 기능입니다. 한번 베리에게 배워보세요</p>
+          <p>이외의 기능은 <strong>'베리야 도움말'</strong>을 통해 알아보시기 바랍니다</p>
+          <p style = "text-decoration: line-through;">생각해보니까 <strong>HTML은 최고의 프로그래밍 언어</strong>입니다</p>
+          -->
+          <h4>RasberryStar</h4>
+          <strong><p>귀염뽀짝한 챗봇친구 베리입니다!</p></strong>
+          <p>안녕하세요! 구름소프트 노예 1호 베리 개발자인 메이커집입니다.</p>
+          <strong><p>심심할때는 카나미로 코딩!!</p></strong>
+          <p>카나미 언어(직접 개발?) 를 사용해 단순 코딩을 지원!</p>
+          <strong><p>이스터에그! 재밌는 이스터에그들이 잔뜩!</p></strong>
+          <p>재밌는 이스터에그들을 찾는 재미!</p>
+          <strong><p>카나미를 배우실려면 http://kanami.online/ 에서 배울수 없습니다!</p></strong>
+          <p>메이커집이 제작한 카나미라는 언어를 알려줄 수 있는 기능입니다. 한번 베리에게 배워보세요</p>
+          <p>이외의 기능은 <strong>'베리야 도움말'</strong>을 통해 알아보시기 바랍니다</p>
+          <p style = "text-decoration: line-through;">생각해보니까 <strong>HTML 최고의 프로그래밍 언어</strong>입니다</p>
+        </div>
+      </div>
+      <hr>
+      <!-- Advertising -->
+      <div class="w3-white w3-margin">
+        <div class="w3-container w3-padding w3-black">
+          <h4>구름 커뮤니티 참여하기</h4>
+        </div>
+        <div class="w3-container w3-white">
+          <br>
+          <!-- <a href = "https://discord.com/invite/RUhCyE?utm_source=Discord%20Widget&utm_medium=Connect"><img src = "Poster.png" style = "width:452px; height:700px"></a>-->
+          <iframe src="https://discordapp.com/widget?id=753941433492308039&theme=dark" width="452" height="700"></iframe>
+        </div>
+      </div>
+      <hr>
+
+      <!-- Posts -->
+      <div class="w3-white w3-margin">
+        <div class="w3-container w3-padding w3-black">
+          <h4>다른 봇들 보기</h4>
+        </div>
+        <a href = "#" class = "AnotherBots">
+        <ul class="w3-ul w3-hoverable w3-white">
+          <li class="w3-padding-16">
+            <img src="http://makerzip.com/assets/hodu_Gwaja/SigmaProfile.jpg" alt="시그마 프사" class="w3-left w3-margin-right" style="width:50px">
+            <span class="w3-large">시그마</span>
+            <br>
+            <span>호두과자가 제작한 천진난만한 귀염둥이 챗봇!</span>
+          </li>
+        </a>
+        <a href = "#"class = "AnotherBots">
+          <li class="w3-padding-16">
+            <img src="http://makerzip.com/assets/hodu_Gwaja/HyoSeenProflle.png" alt="Image" class="w3-left w3-margin-right" style="width:50px">
+            <span class="w3-large">효신봇</span>
+            <br>
+            <span>방세준의 대작!!</span>
+          </li>
+        </a>
+          <a href = "#"class = "AnotherBots">
+          <li class="w3-padding-16">
+            <img src="http://makerzip.com/assets/hodu_Gwaja/CherryProfile.png" alt="Image" class="w3-left w3-margin-right" style="width:50px">
+            <span class="w3-large">체리</span>
+            <br>
+            <span>베리의 오픈소스 버전</span>
+          </li>
+        </a>
+        </ul>
+      </div>
+      <hr>
+
+      
+
+     
+      
+
+    <!-- END About/Intro Menu -->
+    </div>
+
+  <!-- END GRID -->
+  </div>
+
+<!-- END w3-content -->
+</div>
+
+
+
+<!-- Footer -->
+<footer class="w3-container w3-dark-grey" style="padding:32px">
+  <a href="#" style = "float: right; text-decoration: none;"><i class="fa fa-arrow-up w3-margin-right"></i>맨 위로 가기</a> <br>
+  <p style = "text-align: center;">Copyright © 2020 <a href="https://makerzip.com/">GoormSoft</a> - All rights reserved
+    <br>MakerZip :  <!--제작자와 맞장뜨기--> <a href="mailto:makerzip@makerzip.com">makerzip@makerzip.com</a>
+    <br>HoduGwaja : <a href="honeybutter9250@gmail.com">honeybutter9250@gmail.com</a>
+  </p>
+</footer>
+
+<script>
+// Toggle between hiding and showing blog replies/comments
+document.getElementById("myBtn").click();
+function myFunction(id) {
+  var x = document.getElementById(id);
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+
+function likeFunction(x) {
+  x.style.fontWeight = "bold";
+  x.innerHTML = "✓ Liked";
+}
+</script>
+
+</body>
+</html>

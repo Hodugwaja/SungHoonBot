@@ -1,0 +1,28 @@
+{
+  "name": "sunghoonbot",
+  "version": "1.0.0",
+  "description": "Imoge Bot",
+  "main": "SungHoon.js",
+  "scripts": {
+    "test": "start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cropMr/SungHoonBot.git"
+  },
+  "author": "HoduGwaja",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cropMr/SungHoonBot/issues"
+  },
+  "homepage": "https://github.com/cropMr/SungHoonBot#readme",
+  "dependencies": {
+    "discord.js": "^12.3.1",
+    "discord.js-poll-embed": "^1.0.2",
+    "install": "^0.13.0",
+    "ng2-file-upload": "^1.4.0",
+    "opusscript": "0.0.7",
+    "simple-youtube-api": "^5.2.1",
+    "ytdl-core": "^3.3.0"
+  }
+}
