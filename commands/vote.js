@@ -33,7 +33,7 @@ module.exports = {
             .setTitle("성훈봇 제공 투표소")
             .setURL(pictureLink)
             .setAuthor('성훈봇#9977', pictureLink, githubLink)
-            .setDescription(`${message.author.username}` + "님이 제안한 투표입니다")
+            .setDescription(`${message.author.username}` + "님이 제안한 투표입니다\n" + `${contentsVote}`)
             .setThumbnail(`${message.author.displayAvatarURL()}`)
             .addField('투표하는 법', "해당 메시지의 O(찬성), X(반대) 이모지를 클릭하시면 됩니다", false)
             .addField('투표내용', `${contentsVote}`, false)

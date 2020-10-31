@@ -25,7 +25,11 @@ for (const file of commandFiles){
     client.commands.set(commandList.name, commandList);
     console.log(commandList);
 }
-
+function random(min, max){
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
 
 client.on('ready', () => {
     console.log(`logged in as ${client.user.tag} `);
@@ -40,15 +44,50 @@ client.on('ready', () => {
 });
 
 
+
 client.on("message", (message) => {
     let args = message.content.split(' ');
     let GongJi = message.content.split('.');
     if(message.author.bot) {
         return NaN
     }
+    client.on("messageReactionAdd", (reaction, messageReact) => {
+        
+        if(args[1] === "찬반투표"){
+            const filter = (reaction, user) => {
+                return ['⭕', '❌'].includes(reaction.emoji.name) && user.id === messageReact.author.id;
+            };
+            message.awaitReactions(filter, { max: 1, time: 60000, errors: ['time'] })
+                .then(collected => {
+                    const reaction = collected.first();
+
+                if (reaction.emoji.name === '⭕') {
+                    message.reply('찬성 투표');
+                } else if(reaction.emoji.name === '❌'){
+                    message.reply('반대 투표');
+                }
+            })
+        }
+    })
     if (message.channel instanceof discord.DMChannel){
         noDm = client.users.cache.get(message.author.id);
-        noDm.send("DM으로 하지마 미친놈아");
+        switch(random(1, 100000)){
+            case 1: noDm.send("카나미는 고양이다 냥!"); break;
+            case 2: noDm.send("https://www.youtube.com/watch?v=RMfRHK9bYcw&t=8s"); break;
+            case 3: noDm.send("시그마 귀여움"); break;
+            case 4: noDm.send("404NotFuck"); break; 
+            case 5: noDm.send("베리 봇도 많이 써주세요... 라고 하네요 커피 놈이\nhttps://discord.com/oauth2/authorize?client_id=743277415874429008&permissions=2146954622&scope=bot\n여기로 오세요"); break; 
+            case 6: noDm.send("머랭!"); break;
+            case 7: switch(random(1, 700000000)){
+                    case 1 : noDm.send("문상 획득을 축하합니다"); break;
+                    default : noDm.send("문상 안획득을 추가합니다");
+                }
+                break;
+            case 8:
+            case 9:
+            case 10:  noDm.send("맥심 초보"); break;
+            default : noDm.send("DM으로 하지마 미친놈아");
+        }
         return undefined;
     }
     if(message.content === "성훈아"){
@@ -66,7 +105,7 @@ client.on("message", (message) => {
     */
     
     if(GongJi[1] === '서버공지'){
-        if(message.member.hasPermission(['ADMINISTRATOR'])){
+        if(message.member.hasPermission(['ADMINISTRATOR'] || message.author.id === "533120411274182666")){
             switch(client.commands.get(GongJi[1]).execute(message, GongJi)){
                 case 1:
                     const wrongWriting = client.users.cache.get(message.author.id);
@@ -153,6 +192,22 @@ client.on("message", (message) => {
             }
         }
     }
+
+    /**def Sadari(users: list, sadari: list):
+    sadari1 = copy.deepcopy(sadari)
+
+    team = []
+    for user in users:
+        random.shuffle(sadari1)
+        team.append(f"[{sadari1[0]}] {user}")
+        sadari1.remove(sadari1[0])
+
+    for i in sorted(list(set(sadari))):
+        for result in team:
+            for name in users:
+                if result.startswith(f"[{i}]"):
+                    if result.endswith(name):
+                        yield result */
 });/*
 const { Client } = require('discord.js')
 const ytdl = require('ytdl-core')
